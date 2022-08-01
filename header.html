@@ -1,0 +1,177 @@
+<style>
+    .header {
+        --padd_h: 40px;
+        --padd_v: 14px;
+        --col-accent: #67B0D1;
+
+        position: sticky;
+        top: 0;
+        background-color: var(--col-accent);
+        display: flex;
+        align-items: center;
+        padding-left: var(--padd_h);
+        padding-block: var(--padd_v);
+        gap: 40px;
+    }
+
+    .header__btn-back {
+        --btn-size: 32px;
+        width: var(--btn-size);
+        aspect-ratio: 1;
+        min-width: var(--btn-size);
+        cursor: pointer;
+        background: url(./assets/icons/arrow-left.svg) no-repeat center center/cover;
+        background-size: 80%;
+    }
+
+    .header__logo {
+        --logo-size: 60px;
+        width: var(--logo-size);
+        height: var(--logo-size);
+        min-width: var(--logo-size);
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+        background: url(./assets/logo.jpeg) no-repeat center center/cover;
+        background-size: 130%;
+        box-shadow: 0 0 15px rgba(68, 68, 68, 0.4);
+    }
+
+    @media only screen and (max-width: 630px) {
+
+        /* .header__logo { --logo-size: 48px; } */
+        .header__logo {
+            transform: scale(0.6);
+        }
+
+        .header__btn-back {
+            transform: scale(0.6);
+        }
+
+        .header {
+            --padd_v: 2px;
+            --padd_h: 20px;
+            gap: 0px;
+        }
+    }
+
+    .card {
+        display: flex;
+        position: absolute;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background-color: #dee4ec;
+        color: aliceblue;
+        width: 70%;
+        height: 70%;
+        margin-left: 17%;
+        margin-right: 17%;
+        margin-top: 5%;
+        border: 1px solid aliceblue;
+        border-radius: 10px;
+        transition: transform .5s;
+    }
+   
+</style>
+<header class="header">
+    <div class="header__btn-back">
+    </div>
+    <div class="header__logo">
+    </div>
+</header>
+<div class="container-fluid" id="hey" style="margin-top:0px; opacity: 0.87;">
+
+    <div class="card text-center">
+        <div class="card-header">
+
+        </div>
+        <div class="card-body">
+
+            <p class="card-text">
+            <p style="color: rgba(8, 8, 8, 0.98); font-size: 30px;" class="mx-4"><i class="fa fa-envelope-o px-2"
+                    style="color: rgb(4, 4, 4);">
+                    <br>
+                    <label> Name </label>
+                    <input type="text" name="Name" size="50" /> <br><br><br>
+
+                    <label> Email</label>
+                    <input type="email" id="email" name="email" /> 
+
+                    <label>Mobile Number</label>
+                    <input type="text" name="country code" value="+91" size="2" />
+                    <input type="text" name="phone" size="10" /> <br><br><br>
+
+                    <label>Date of birth</label>
+                    <input type="date" id="dob">
+                    <button onclick="dateDisplay()">Submit</button>
+                    <p id="demo"></p>
+                    
+                    <p style="color: rgba(8, 8, 8, 0.98); font-size: 30px;" class="mx-4"><i class="fa fa-envelope-o px-2"
+                    style="color: rgb(4, 4, 4);">
+
+                    <label>Gender</label>
+                    <select>
+                        <option value="Gender">Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Others">Others</option>
+                    </select><br><br><br>                    
+
+                    <label>State</label>
+                    <select>
+                        <option value="State">State</option>
+
+                    </select>
+                    <label>City</label>
+                    <select>
+                        <option value="City">City</option>
+
+                    </select>
+                    <label>Pincode</label>
+                    <select>
+                        <option value="Pincode">Pincode</option>
+
+                    </select>
+
+
+                    </p>
+            </p>
+            <style>
+            button 2 {
+                display: inline-block;
+                background-color: #7b38d8;
+                border-radius: 10px;
+                border: 4px double #cccccc;
+                color: #eeeeee;
+                text-align: center;
+                font-size: 28px;
+                padding: 20px;
+                width: 200px;
+                -webkit-transition: all 0.5s;
+                -moz-transition: all 0.5s;
+                -o-transition: all 0.5s;
+                transition: all 0.5s;
+                cursor: pointer;
+                margin: 5px;
+              }
+            </style>
+          
+            <button type="button2">Done</button>
+          
+        
+            
+             
+            <script>
+                function dateDisplay() {
+                    var x = document.getElementById("dob").value;
+                    document.getElementById("demo").innerHTML = x;
+                }
+            </script>
+
+
+
+        </div>
+    </div>
+
+
+</div>
